@@ -1,0 +1,10 @@
+version: '2'
+services:
+  socketio_public:
+    build: .
+    stdin_open: true
+    tty: true
+    ports:
+    - "5000:5000"
+    volumes:
+    - ./src/app:/src/app
