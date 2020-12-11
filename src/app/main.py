@@ -16,7 +16,7 @@ async_mode = "eventlet"
 app = Flask(__name__, static_folder='static', static_url_path='')
 app.config['SECRET_KEY'] = 'secret!'
 
-socketio = SocketIO(app, async_mode=async_mode, engineio_logger=False, origins='*', cors_allowed_origins="*")
+socketio = SocketIO(app, async_mode=async_mode, engineio_logger=True, origins='*', cors_allowed_origins="*")
 
 app.config['CORS_SUPPORTS_CREDENTIALS'] = True
 CORS(app, resources={r"/*": {"origins": "*"}}, automatic_options=True)
